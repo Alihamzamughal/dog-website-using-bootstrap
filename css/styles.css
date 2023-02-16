@@ -1,0 +1,209 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    text-align: center; /* use tect-align in body part to we use it 1 time for refactoring */ 
+}
+/*  for refacoting istead of element we use specfic classes h1 is broad 
+make sure by refacorting dont change css function that effect our website*/
+h1,h2,h3,h4,h5,h6{
+    
+    font-family: 'Montserrat-Bold', sans-serif;
+}  
+p{
+    color: #8f8f8f;
+} 
+i{
+    margin-right: 5px;
+}
+
+/*......Headings........*/
+.big-heading{      /* big-heading is class in h1 more specfic detaile */
+    font-family: 'Montserrat-Black', sans-serif;
+    font-size: 4rem;
+    line-height: 1.5;
+    font-weight: bold; 
+}
+.section-heading{   /* section-heading is class in h2 of price and testimonial section  */
+    font-size: 3.5rem;
+    line-height: 1.5;
+}
+
+
+
+#title{
+    background-color: #ff4c68;
+    color: #fff;
+    text-align: left;
+}
+
+
+/* navigation bar*/
+.navbar{
+    padding: 0 0 4.5rem; /* up , right-left , down */
+}
+
+.navbar-brand{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 2.3rem;
+    font-weight: bold;
+    
+}
+.nav-item{
+    padding: 0 18px;
+    font-family: 'Montserrat-light'sans-serif;
+}
+/*down-button costom class selector */
+.down-button {
+    margin: 5% 3% 5% 0%;
+}
+
+/* container-1 is custom selector class  of container-fluid*/
+.container-1{
+    padding: 3% 15% ;  /* add 7% on botom */
+   
+}
+
+
+/* see z-index chart to get help in z-index postioning */
+/* title image */
+.title-ip-img{
+    height: 700;
+    width: 20%; /* small mobile png 20% image acc to its parent */
+    transform: rotate(25deg); /* rotate img 25degree */
+    position: absolute; /* postion absolute take mobile image out flow and 
+                           by default its z index is 0 which is low than 1
+                           z-index of features section */
+    right: 23%;         /* it take image to right 23% to aling it with 
+                          download text */                 
+}
+/* media Qurey CSS advance property */
+@media(max-width:991px){  /*for mobile and tab when width hit 991 or low these properties applied */ 
+    #title{
+        text-align: center;  /* for tab and mobile text to align center */
+    }
+    
+    .title-ip-img{
+        position:static; /* because to put image back into flow of HTML */
+        transform: rotate(0); /* back to its original postion (stright) */
+        width: 50%; /* small mobile png 20% image acc to its parent */                  
+    }
+
+}
+
+
+
+
+
+
+/*Sencond section*/
+#features{
+    background-color: #fff;
+    padding: 7% 15%;
+    position: relative; /* if we select postion absoulute than 
+                          second section "feature" become out of flow 
+                          section but reletive do fine 
+                          as we take this elemet on top*/
+    z-index: 1;  
+
+}
+.container-2{
+    margin: 70px auto 130px;
+   
+   
+}
+.sec2-box{
+    padding:  5%;
+}
+
+.key-icon{
+    font-size: 70px;
+    color: #ef8172;
+    margin-bottom: 1rem;
+}
+
+.key-icon:hover{
+    color: #ff4c68;
+}
+
+
+
+/* section 3 */
+#testimonials{
+    background-color: #ef8172;
+    color: #fff;
+
+}
+.testimonial-text{
+    font-size: 3rem;
+    line-height: 1.5;
+
+}
+
+.testimonial-image{
+   width: 10%;
+   border-radius: 100%;
+   margin: 20px;
+}
+.carousel-item{
+    padding: 7% 15%; /* change padding postion tetimonials to carousel item 
+                      so button has there seperate padding before whole section has 
+                      padding not anymore it give button wide space from text*/
+} 
+
+/* section 4 */
+#press{
+    background-color: #ef8172;
+    margin-bottom: 3%;
+}
+.press-logo{
+   width: 15%;
+   margin: 20px 20px 50px;
+   
+}
+
+/*....Pricing.... */
+#pricing{
+    padding: 100px;
+}
+.pricing-column{
+    padding: 3% 2%;
+}
+.card-header{
+    font-weight: bold;
+}
+.pricing-text{
+    font-weight: bold;
+}
+
+
+
+
+/*....Call to Action..... section 4....*/
+#cta{
+    background-color: #ff4c68;
+    padding: 8% 15% 4%;
+}
+.action-text{       
+    color: #fff;/*when ever we have color background we use white color for text*/
+    font-family: montserrat-black, sans-serif;
+    font-size: 4.2rem;
+    line-height: 1.5;
+    padding-bottom: 5% ;
+    font-weight: bold;
+}
+
+
+
+/*.....Footer.....section 5 ....*/
+#footer{
+    background-color: #fff;
+    padding: 7% 15%;
+}
+.footer-icons{
+    margin: 20px 10px;
+    
+    
+}
+.footer-para{
+    font-size: 1.2rem;
+}
+
